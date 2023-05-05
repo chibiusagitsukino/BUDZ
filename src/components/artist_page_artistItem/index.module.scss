@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 2px;
+
+  .info_artist {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+    img {
+      border-radius: 50%;
+    }
+  
+    .star_filled {
+      font-size: 25px;
+      cursor: pointer;
+      color: rgba(226, 189, 5, 0.77);
+    }
+    .star {
+      font-size: 25px;
+      cursor: pointer;
+    }
+  }
+  .name_artist_desktop {
+    text-transform: uppercase;
+  }
+  .name_artist {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+
+    .name_artist_desktop {
+      display: none;
+    }
+    .name_artist {
+      text-transform: uppercase;
+      display: block;
+
+      margin: auto;
+      font-size: 50px;
+    }
+  }
+}

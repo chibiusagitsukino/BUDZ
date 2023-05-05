@@ -1,0 +1,108 @@
+.radio_page {
+  width: 95vw;
+  padding: 20px;
+  margin-bottom: 80px;
+  .navbar_container {
+    width: 100%;
+  }
+  .container {
+    padding: 20px;
+    height: 100vh;
+    width: 98vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+      font-size: 18px;
+    }
+    .genre_list {
+      background-color: rgba(162, 195, 223, 0.167);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 80vw;
+      gap: 30px;
+      border-radius: 10px;
+   
+    }
+    .track_list {
+      background-color: rgba(162, 195, 223, 0.167);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 80vw;
+      gap: 30px;
+      border-radius: 10px;
+      padding: 25px 25px 100px 25px;
+      .track_item {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .radio_page {
+    padding: 20px;
+
+    .navbar_container {
+      width: 100%;
+    }
+    .container {
+      padding: 20px 0px 50px 20px;
+      height: 100vh;
+      width: 100%;
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        height: 8px;
+        width: 4px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color:transparent;
+      }
+
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      .genre_list {
+        background-color: rgba(162, 195, 223, 0.167);
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        width: 92vw;
+        flex-direction: row;
+        gap: 30px;
+        border-radius: 10px;
+       
+      }
+      .track_list {
+        background-color: rgba(162, 195, 223, 0.167);
+        display: flex;
+        flex-wrap: wrap;
+        width: 92vw;
+
+        gap: 30px;
+        border-radius: 10px;
+        margin-bottom:100px;
+        .track_item {
+          width: 400px;
+        }
+      }
+    }
+  }
+}

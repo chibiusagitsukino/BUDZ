@@ -1,0 +1,26 @@
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.579);
+  .YoutubeModal {
+    margin-top: -80px;
+    position: relative;
+    width: 80%;
+    cursor: pointer;
+
+    p {
+      text-decoration: underline;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

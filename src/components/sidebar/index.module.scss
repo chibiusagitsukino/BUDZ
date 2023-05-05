@@ -1,0 +1,104 @@
+.Sidebar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 10;
+
+  .icons_sidebar {
+    background-color: rgba(128, 128, 128, 0.208);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    border-radius: 18px;
+
+    .containerLogo {
+      display: none;
+    }
+
+    .icon_search {
+      font-size: 20px;
+      color: rgba(251, 251, 251, 0.479);
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        color: $white;
+      }
+    }
+    .icon {
+      font-size: 20px;
+      color: rgba(251, 251, 251, 0.479);
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        color: $white;
+      }
+    }
+    .hr {
+      display: none;
+    }
+    .icon_desktop {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Sidebar {
+    position: relative;
+    padding: 0;
+    width: 120px;
+    background-color: $primary-color;
+    z-index: 0;
+    .icons_sidebar {
+      width: 75px;
+      border-radius: 0px;
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      background-color: transparent;
+
+      .containerLogo {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(251, 251, 251, 0.896);
+   
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+
+        .logo {
+          position: fixed;
+          top: -3px;
+          left: 20%;
+          margin-top: 30px;
+        
+        }
+      }
+      .icon_search {
+        display: none;
+      }
+      .hr {
+        display: block;
+        width: 20px;
+        border: 1px solid rgba(251, 251, 251, 0.479);
+      }
+      .icon_desktop {
+        display: block;
+        font-size: 20px;
+        color: rgba(251, 251, 251, 0.572);
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}

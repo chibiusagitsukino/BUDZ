@@ -1,0 +1,31 @@
+.FavoriteArtistPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  width: 97vw;
+  height: 100vh;
+  overflow-y: auto;
+
+  .Navbar {
+    width: 90vw;
+  }
+
+  .Artists {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 40px;
+    margin-left: -40px;
+  }
+}
+.noFavorites {
+  font-size: 2rem;
+  color: #555;
+  text-align: center;
+  padding: 40px;
+}
+@media screen and (min-width: 1000px) {
+}

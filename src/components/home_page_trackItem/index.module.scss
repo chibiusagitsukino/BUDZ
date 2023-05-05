@@ -1,0 +1,138 @@
+.TrackItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgba(128, 126, 126, 0.2);
+  }
+
+  .mainContent {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    &:hover {
+      .index {
+        display: none;
+      }
+      .playIcon {
+        display: block;
+        font-size: 40px;
+        color:$primary-color;
+      }
+    }
+    .index {
+      color: $white;;
+      display: block;
+    }
+    .playIcon {
+      display: none;
+    }
+    img {
+      border-radius: 30%;
+    }
+    .contentTitle {
+      .title {
+        font-weight: bold;
+      }
+      .contentArtist {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3px;
+        .icon {
+          font-size: 12px;
+        }
+        .artist {
+          font-size: 12px;
+          color: $light-grey;
+        }
+      }
+    }
+  }
+
+  .info {
+    .followers {
+      display: none;
+    }
+    .duration {
+      display: none;
+    }
+    .reactionsIcons {
+      display: flex;
+      .heart {
+        display: block;
+        font-size: 22px;
+      }
+      .heart_fill {
+        display: block;
+        font-size: 22px;
+        color: rgba(189, 63, 63, 0.85);
+      }
+
+      .dots {
+        font-size: 22px;
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .TrackItem {
+    .mainContent {
+      .index {
+        display: block;
+        color: $grey;
+      }
+
+      .contentTitle {
+        .title {
+        }
+        .contentArtist {
+          .icon {
+          }
+          .artist {
+          }
+        }
+      }
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      font-size: 12px;
+
+      .followers {
+        display: block;
+        color: gray;
+      }
+
+      .duration {
+        display: block;
+      }
+      .reactionsIcons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        
+
+        .heart {
+        }
+
+        .dots {
+          display: block;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

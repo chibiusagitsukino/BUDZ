@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    background-color: rgba(128, 126, 126, 0.2);
+    .icons_play {
+      .playIcon {
+        filter: opacity(1);
+        transform: translate(-5px, -25px);
+      }
+    }
+  }
+
+  .AlbumItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100px;
+
+    img {
+      border-radius: 30%;
+    }
+
+    .text {
+      h4 {
+        display: none;
+      }
+      .artist_name_fluo {
+        position: absolute;
+        left: 4px;
+        top: 18px;
+        font-size: 14px;
+
+        filter: drop-shadow(0px 2px 10px $primary-color);
+      }
+      .contentArtist {
+        display: none;
+      }
+    }
+  }
+  .icons_play {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    .playIcon {
+      width: 50px;
+      height: 50px;
+      background-color: $primary-color;
+      border-radius: 50%;
+      color: rgb(230, 217, 217);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 35px;
+      cursor: pointer;
+      filter: opacity(0);
+      transition: all 0.25s;
+      box-shadow: 1px 1px 1px rgb(62, 58, 58);
+      transform: translate(-5px, 0px);
+      margin-top: 40px;
+    }
+    
+  }
+  .reactionIcons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    .folder {
+      font-size: 22px;
+    }
+    .folder_fill {
+      font-size: 22px;
+      color: $primary-color;
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    padding: 10px;
+    &:hover {
+     
+      .icons_play {
+        .playIcon {
+          filter: opacity(1);
+          transform: translate(55px, -20px);
+        }
+      }
+    }
+    .AlbumItem {
+      .text {
+        h4 {
+          display: block;
+        }
+        .artist_name_fluo {
+          display: none;
+        }
+        .contentArtist {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 3px;
+          .icon {
+            font-size: 12px;
+          }
+          .artist {
+            font-size: 12px;
+            color: $light-grey;
+          }
+        }
+      }
+    }
+    .icons_play {
+      .playIcon {
+        width: 50px;
+        height: 50px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        color: rgb(230, 217, 217);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        cursor: pointer;
+        filter: opacity(0);
+        transition: all 0.25s;
+        box-shadow: 1px 1px 1px rgb(62, 58, 58);
+        transform: translate(55px, -30px);
+        margin-top: 40px;
+        margin-right: 40px;
+      }
+    }
+  }
+}

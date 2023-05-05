@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+
+  &:hover {
+    background-color: rgba(128, 126, 126, 0.2);
+    .ArtistItem {
+      .icons_play {
+        .playIcon {
+          filter: opacity(1);
+          transform: translate(-5px, -25px);
+        }
+      }
+      .image_name {
+        img {
+          filter: saturate(100%);
+        }
+      }
+    }
+  }
+  .ArtistItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+
+    .image_name {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100px;
+      img {
+        border-radius: 30%;
+        scale: 100%;
+        filter: saturate(50%);
+      }
+      .artistName {
+        display: none;
+      }
+    }
+    .reactionIcons {
+      display: flex;
+      font-size: 1.3rem;
+      gap: 3px;
+      .star_fill {
+        color: rgba(226, 189, 5, 0.77);
+      }
+    }
+  }
+  .icons_play {
+    .artist_name_fluo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      font-size: 16px;
+      transform: translate(-90px, 20px);
+      width: 50px;
+      height: 50px;
+    }
+
+    .playIcon {
+      width: 50px;
+      height: 50px;
+      background-color: $primary-color;
+      border-radius: 50%;
+      color: rgb(230, 217, 217);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 35px;
+      cursor: pointer;
+      filter: opacity(0);
+      transition: all 0.25s;
+      box-shadow: 1px 1px 1px rgb(62, 58, 58);
+      transform: translate(-5px, 0px);
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: rgba(128, 126, 126, 0.2);
+      .ArtistItem {
+        .icons_play {
+          .playIcon {
+            filter: opacity(1);
+            transform: translate(30px, 0px);
+          }
+        }
+      }
+    }
+    .ArtistItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      width: 100%;
+
+      .image_name {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 100px;
+        img {
+          border-radius: 30%;
+          scale: 100%;
+        }
+        .artistName {
+          display: block;
+        }
+      }
+
+      .icons_play {
+        .artist_name_fluo {
+          display: none;
+        }
+
+        .playIcon {
+          width: 50px;
+          height: 50px;
+          background-color: $primary-color;
+          border-radius: 50%;
+          color: rgb(230, 217, 217);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 35px;
+          cursor: pointer;
+          filter: opacity(0);
+          transition: all 0.25s;
+          box-shadow: 1px 1px 1px rgb(62, 58, 58);
+          transform: translate(30px, -10px);
+        }
+      }
+    }
+  }
+}

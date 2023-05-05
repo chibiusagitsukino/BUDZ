@@ -1,0 +1,577 @@
+.mainContainer {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    gap: 20px;
+    .leftSide {
+      padding-bottom: 80px;
+      .artistListMobile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+
+        .titleTopArtist {
+          color: white;
+        }
+        .listTopArtist {
+          display: flex;
+          width: 90vw;
+          overflow-x: auto;
+          &::-webkit-scrollbar {
+            height: 8px;
+            width: 4px;
+          }
+          &::-webkit-scrollbar-track {
+            background: rgba(7, 7, 7, 0.098);
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: rgba(215, 208, 208, 0.122);
+          }
+        }
+      }
+      .albumListMobile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+
+        .titleTopAlbum {
+          color: white;
+        }
+        .listTopArtist {
+          display: flex;
+          width: 90vw;
+          overflow-x: auto;
+          &::-webkit-scrollbar {
+            height: 8px;
+            width: 4px;
+          }
+          &::-webkit-scrollbar-track {
+            background: rgba(7, 7, 7, 0.098);
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: rgba(215, 208, 208, 0.122);
+          }
+        }
+      }
+      .mainListRadio {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 20px;
+        .listRadio {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          overflow: auto;
+        }
+      }
+      .title {
+        display: flex;
+        padding-bottom: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .titleTrending {
+        margin-left: 20px;
+        color: $white;
+      }
+      .listTrack {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 97vw;
+        margin-left: 0;
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 20px;
+        cursor: pointer;
+        &::-webkit-scrollbar {
+          height: 8px;
+          width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+          background: rgb(175, 166, 166);
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background-color: grey;
+        }
+      }
+    }
+    .rightSide {
+      display: none;
+    }
+  }
+}
+
+.login_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+
+  .login_overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: $primary-color;
+    filter: opacity(80%);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 12;
+  }
+  .login_box {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 13;
+    font-size: 0.8rem;
+    width: 100%;
+    height: 100vh;
+    color: rgb(208, 205, 205);
+
+    padding: 15px;
+
+    .header_login {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      .info1 {
+      }
+      .container_logo{
+        transform: translate(-8px, 4px);
+        background-color: #ffffff;
+        width:60px;
+        height:60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      .logo {
+        scale: 45%;
+        padding:4px;
+        translate:(0px -3px)
+      }
+    }
+      .deezer_container {
+        .logo_title {
+          transform: translate(12px, 4px);
+          color: white;
+          font-size: 0.7rem;
+        }
+        .deezer {
+          transform: translate(0, 4px);
+          scale: 70%;
+          
+        }
+      }
+    }
+    .body_login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 70%;
+      color: white;
+      .container_form {
+        display: flex;
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          padding: 1.4rem;
+
+          input::placeholder {
+            color: rgb(253, 253, 253);
+          }
+        }
+        input {
+          width: 150px;
+          height: 25px;
+          background: rgba(0, 0, 0, 0.42);
+          color: #ffffff;
+          border: none;
+          border-radius: 3px;     
+          text-align: left;
+          letter-spacing: 0.1em;
+          outline: none;
+          padding: 8px;
+        }
+
+        .input_login {
+          display: flex;
+          justify-content:center;
+          background: none;
+          width: 150px;
+          height: 25px;
+          padding:3px;
+          color: $primary-color;
+          background-color: $off-white;
+          border: 1px solid black;
+          cursor: pointer;
+          transition: transform 0.2s;
+
+          &:hover {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+    .footer_login {
+      color:white;
+      .deezer {
+      }
+      .info2 {
+      }
+    }
+  }
+  
+.popup_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 15;
+  
+    .popup_overlay {
+      width: 100%;
+      height: 100vh;
+      background-color: $primary-color;
+      filter: opacity(80%);
+      backdrop-filter: blur(4px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 16;
+    }
+    .popup_error {
+      position: absolute;
+      top:calc(50% - 40px);
+      left:calc(50% - 100px);
+      width:200px;
+      height:80px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 17;
+      font-size: 12px;;
+      color: $primary-color;
+      border-radius: 4px;
+      padding:10px;
+      .close_error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        translate: (-83px -10px);
+        width: 15px;
+        height: 15px;
+        top: 8px;
+        left: 28px;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+        border: 1px solid rgb(95, 94, 94);
+        &:hover {
+          background-color: $primary-color;
+          color: white;
+        }
+      }
+      p{
+        text-align: center;
+      }
+    }
+}
+
+
+}
+@media screen and (min-width: 1000px) {
+  .mainContainer {
+    padding: 0 20px;
+    // display: flex;
+    // flex-direction: column;
+    .container {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      .leftSide {
+        width: 60vw;
+        .artistListMobile {
+          display: none;
+        }
+        .albumListMobile {
+          display: none;
+        }
+
+        .mainListRadio {
+          display: none;
+        }
+        .title {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .titleTopArtist {
+            margin-left: 20px;
+          }
+        }
+        .titleTrending {
+          margin-left: 20px;
+          color: $grey;
+        }
+        .listTrack {
+          width: 100%;
+          height: 58vh;
+          overflow: auto;
+          padding-bottom: 40px;
+        }
+      }
+      .rightSide {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 30vw;
+        // height: 100vh;
+        // .listTopArtist{
+        // height: 100%;
+        // overflow: auto;
+
+        .title {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .titleTopAlbum {
+            margin-left: 20px;
+          }
+        }
+        .titleTopArtist {
+          margin-left: 20px;
+          color: $grey;
+        }
+        .listTopArtist {
+          margin-left: 18px;
+          margin-top: 20px;
+          height: 40vh;
+          gap: 30px;
+          overflow: auto;
+          padding-bottom: 60px;
+          &::-webkit-scrollbar {
+            height: 8px;
+            width: 4px;
+          }
+          &::-webkit-scrollbar-track {
+            background: rgb(175, 166, 166);
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: grey;
+          }
+        }
+      }
+    }
+  }
+  .login_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+  
+    .login_overlay {
+      width: 100%;
+      height: 100vh;
+      background-color: $primary-color;
+      filter: opacity(80%);
+      backdrop-filter: blur(4px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 12;
+    }
+    .login_box {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 13;
+      font-size: 0.8rem;
+      width: 100%;
+      height: 100vh;
+      color: rgb(208, 205, 205);
+  
+      padding: 15px;
+  
+      .header_login {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        .info1 {
+        }
+        .logo {
+        
+        }
+        .deezer_container {
+          .logo_title {
+            transform: translate(12px, 4px);
+            color: white;
+            font-size: 0.7rem;
+          }
+          .deezer {
+            transform: translate(0, 4px);
+            scale: 70%;
+            
+          }
+        }
+      }
+      .body_login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 70%;
+        font-size: 1.2rem;
+        .container_form {
+          display: flex;
+          form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 1.4rem;
+  
+            input::placeholder {
+              color: rgb(253, 253, 253);
+            }
+          }
+          input {
+            width: 200px;
+            height: 35px;
+            background: rgba(0, 0, 0, 0.42);
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;     
+            text-align: left;
+            letter-spacing: 0.1em;
+            outline: none;
+            padding: 8px;
+          }
+  
+          .input_login {
+            display: flex;
+            justify-content:center;
+            background: none;
+            width: 200px;
+            height: 35px;
+            padding:3px;
+            color: $primary-color;
+            background-color: $off-white;
+            border: 1px solid black;
+            cursor: pointer;
+            transition: transform 0.2s;
+  
+            &:hover {
+              transform: scale(0.95);
+            }
+          }
+        }
+      }
+      .footer_login {
+        .deezer {
+        }
+        .info2 {
+        }
+      }
+    }
+    
+  .popup_container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 15;
+    
+      .popup_overlay {
+        width: 100%;
+        height: 100vh;
+        background-color: $primary-color;
+        filter: opacity(80%);
+        backdrop-filter: blur(4px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 16;
+      }
+      .popup_error {
+        position: absolute;
+        top:calc(50% - 60px);
+        left:calc(50% - 150px);
+        width:300px;
+        height:120px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 17;
+        font-size: 16px;;
+        color: $primary-color;
+        border-radius: 5px;
+        padding:10px;
+        .close_error {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          translate: (-130px -20px);
+          width: 15px;
+          height: 15px;
+          top: 8px;
+          left: 28px;
+          font-weight: bold;
+          font-size: 14px;
+          cursor: pointer;
+          border: 1px solid rgb(95, 94, 94);
+          &:hover {
+            background-color: $primary-color;
+            color: white;
+          }
+        }
+        p{
+          text-align: center;
+        }
+      }
+  }
+  
+  
+  }
+  
+}

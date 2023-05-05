@@ -1,0 +1,29 @@
+.MainLayout {
+  display: flex;
+  .content {
+    flex-grow: 1;
+    background-color: transparent;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-left: 0px;
+    z-index: 2;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .MainLayout {
+    display: flex;
+    .content {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: $off_white;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      margin-left: -40px;
+      z-index: 2;
+      overflow: hidden;
+    }
+  }
+}
